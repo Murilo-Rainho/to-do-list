@@ -1,0 +1,191 @@
+body {
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: oblique;
+  font-size: 20px;
+	font-weight: 20px;
+	color: white;
+  background-image: linear-gradient(45deg, #b83d3d, #1A5D78);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+.butao {
+	color: rgb(255, 255, 255);
+  background-image: linear-gradient(45deg, #b83d3d, #1A5D78);
+	border-color: blue;
+  border-radius: 0.4em;
+  padding: 1em;
+  margin: 0 1em;
+  opacity: 0.8;
+}
+
+.butao:hover {
+	color: white;
+	background-color: black;
+	cursor: pointer;
+  opacity: 1;
+}
+
+.danger:hover {
+  background-color: #ff0000;
+  border-color: black;
+}
+
+#texto-tarefa {
+	color: black;
+}
+
+#texto-tarefa::placeholder {
+	color: #131313;
+}
+
+.container {
+	display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h4 {
+  margin-right: 20px;
+}
+
+#selected {
+  height: 30px;
+  width: 30px;
+	background-color: rgb(128 , 128 , 128);
+}
+
+#finished {
+  height: 30px;
+  width: 30px;
+  background-color: #041741;
+  border-radius: 50%;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+	text-align: center;
+	padding: 20px;
+}
+
+.section-input {
+  margin-bottom: 20px;
+}
+
+.aside-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: transparent;
+  height: 55vh;
+}
+
+aside {
+  position: absolute;
+  right: 0;
+  top: 16%;
+  transform: translateX(100%);
+  overflow-x: hidden;
+}
+
+footer nav ul {
+	list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+	color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+.task {
+  padding: 10px;
+  width: 10em;
+  height: 10em;
+  background-color: #041741;
+  border-radius: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em;
+  cursor: pointer;
+  user-select: none;
+}
+
+#lista-tarefas {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-width: 48em;
+  padding-bottom: 15vh;
+}
+
+#texto-tarefa {
+  padding: 1em;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  background-color: transparent;
+  margin-left: 20px;
+}
+
+#texto-tarefa:focus {
+  background-color: white;
+  border-radius: 0.4em;
+  transition: 0.5s;
+}
+
+.label-style {
+  top: 17%;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  /* background-color: turquoise; */
+}
+
+#menu-button {
+  display: none;
+}
+
+#menu-button:checked ~ aside{
+  transition: 1.5s;
+  transform: translateX(0%);
+  position: fixed;
+}
+
+.menu-button { 
+  /* background-color: violet; */
+  width: 50px;
+}
+
+#gambiarra {
+  height: 9%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gray {
+	background-color: rgb(128 , 128 , 128);
+  transition: 0.5s;
+}
+
+.completed {
+	border-radius: 50%;
+  transition: 0.5s;
+}
