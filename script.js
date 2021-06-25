@@ -7,6 +7,8 @@ const listaTarefas = document.querySelector('#lista-tarefas');
 const removerSelecionado = document.querySelector('#remover-selecionado');
 const moverCima = document.querySelector('#mover-cima');
 const moverBaixo = document.querySelector('#mover-baixo');
+const botaoDeMenu = document.querySelector('#botao-de-menu');
+const asideContainer = document.querySelector('.aside-container');
 
 let tarefas = [];
 let tasks = {};
@@ -155,6 +157,15 @@ moverBaixo.addEventListener('click', () => {
 		}
 	}
 
+})
+
+// Ajuda no escondimento do menu quando não estiver selecionado
+botaoDeMenu.addEventListener('click', () => {
+	if (asideContainer.style.display === 'flex') {
+		asideContainer.style.display = 'none';
+	} else {
+		asideContainer.style.display = 'flex';
+	}
 })
 
 // Apaga de um em um
