@@ -9,35 +9,35 @@
 </head>
 <body>
 	<div class="container">
-		<header>
+		<header class="container__header">
 			<h1>Minha Lista de Tarefas</h1>
-      <section class="legend">
+      <section class="header__legend">
         <h4>Um clique: seleciona</h4>
-        <div id="selected"></div>
+        <div id="legend__selected"></div>
       </section>
-      <section class="legend">
+      <section class="header__legend">
         <h4>Dois cliques: finaliza</h4>
-        <div id="finished"></div>
+        <div id="legend__finished"></div>
       </section>
 		</header>
-    <section class="section-input">
-      <label for="texto-tarefa" class="">Tarefa:<input type="text" placeholder="Ex: Limpar a casa" id="texto-tarefa" maxlength="19"></label>
+    <section class="section__input__task">
+      <label for="input__task" class="">Tarefa:<input type="text" placeholder="Ex: Limpar a casa" id="input__task" maxlength="19"></label>
     </section>
-    <label for="menu-button" id="botao-de-menu" class="label-style"><img src="botao-menu.png" class="menu-button" alt="Botão de menu"></label>
-    <input type="checkbox" name="" id="menu-button">
+    <label for="menu__button__input" id="menu__button__label" class="menu__button__label"><img src="botao-menu.png" class="menu__button__image" alt="Botão de menu"></label>
+    <input type="checkbox" name="" id="menu__button__input">
     <aside>
-      <section class="aside-container">
-        <div id="gambiarra">Menu</div>
-        <button class="butao" type="button" id="criar-tarefa">Criar Tarefa</button>
-        <button class="butao" type="button" id="remover-selecionado">Remover Selecionado</button>
-        <button class="butao" type="button" id="remover-finalizados">Remover Finalizados</button>
-        <button class="butao" type="button" id="salvar-tarefas">Salvar Tarefas</button>
-        <button class="butao" type="button" id="mover-cima">Mover para Cima</button>
-        <button class="butao" type="button" id="mover-baixo">Mover para Baixo</button>
-        <button class="butao danger" type="button" id="apaga-tudo">Apaga Tudo</button>
+      <section class="container__aside">
+        <div id="aside__title">Menu</div>
+        <button class="button" type="button" id="button__make__task">Criar Tarefa</button>
+        <button class="button" type="button" id="button__remove__selected">Remover Selecionado</button>
+        <button class="button" type="button" id="button__remove__finished">Remover Finalizados</button>
+        <button class="button" type="button" id="button__save__tasks">Salvar Tarefas</button>
+        <button class="button" type="button" id="button__move__up">Mover para Cima</button>
+        <button class="button" type="button" id="button__move__down">Mover para Baixo</button>
+        <button class="button danger" type="button" id="button__clear__all">Apaga Tudo</button>
       </section>
 		</aside>
-		<main id="lista-tarefas"></main>
+		<main id="tasks__list"></main>
 		<footer>
 			<nav>
 				<ul>

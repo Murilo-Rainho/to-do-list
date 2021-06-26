@@ -1,28 +1,131 @@
 body {
-	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
-	font-style: oblique;
-  font-size: 20px;
-	font-weight: 20px;
-	color: white;
   background-image: linear-gradient(45deg, #b83d3d, #1A5D78);
-  overflow-x: hidden;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+	font-style: oblique;
+	font-weight: 20px;
+  margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.butao {
-	color: rgb(255, 255, 255);
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container__header {
+  padding: 20px;
+  text-align: center;
+}
+
+h4 {
+  margin-right: 20px;
+}
+
+.header__legend {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+#legend__selected {
+  background-color: rgb(128 , 128 , 128);
+  height: 30px;
+  width: 30px;
+}
+
+#legend__finished {
+  background-color: #041741;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.section__input__task {
+  margin-bottom: 20px;
+}
+
+#input__task {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  color: black;
+  margin-left: 20px;
+  outline: none;
+  padding: 1em;
+}
+
+#input__task:focus {
+  background-color: white;
+  border-radius: 0.4em;
+  transition: 0.5s;
+}
+
+#input__task::placeholder {
+  color: #131313;
+}
+
+.menu__button__label {
+  position: fixed;
+  right: 0;
+  top: 17%;
+  z-index: 1;
+}
+
+.menu__button__image { 
+  width: 50px;
+}
+
+#menu__button__input {
+  display: none;
+}
+
+#menu__button__input:checked ~ aside{
+  display: flex;
+  position: fixed;
+  transform: translateX(0%);
+  transition: 1.5s;
+}
+
+aside {
+  overflow-x: hidden;
+  position: absolute;
+  right: 0;
+  top: 16%;
+  transform: translateX(100%);
+}
+
+.container__aside {
+  background-color: transparent;
+  display: none;
+  flex-direction: column;
+  height: 55vh;
+  justify-content: space-around;
+}
+
+#aside__title {
+  align-items: center;
+  display: flex;
+  height: 9%;
+  justify-content: center;
+}
+
+.button {
   background-image: linear-gradient(45deg, #b83d3d, #1A5D78);
 	border-color: blue;
   border-radius: 0.4em;
-  padding: 1em;
+  color: rgb(255, 255, 255);
   margin: 0 1em;
   opacity: 0.8;
+  padding: 1em;
 }
 
-.butao:hover {
-	color: white;
+.button:hover {
 	background-color: black;
+	color: white;
 	cursor: pointer;
   opacity: 1;
 }
@@ -32,72 +135,49 @@ body {
   border-color: black;
 }
 
-#texto-tarefa {
-	color: black;
-}
-
-#texto-tarefa::placeholder {
-	color: #131313;
-}
-
-.container {
-	display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h4 {
-  margin-right: 20px;
-}
-
-#selected {
-  height: 30px;
-  width: 30px;
-	background-color: rgb(128 , 128 , 128);
-}
-
-#finished {
-  height: 30px;
-  width: 30px;
-  background-color: #041741;
-  border-radius: 50%;
-}
-
-.legend {
+#tasks__list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  list-style: none;
+  max-width: 48em;
+  padding-bottom: 15vh;
+}
+
+.task {
   align-items: center;
+  background-color: #041741;
+  border-radius: 0.4em;
+  cursor: pointer;
+  display: flex;
+  height: 10em;
+  justify-content: center;
+  margin: 0.5em;
+  padding: 10px;
+  user-select: none;
+  width: 10em;
 }
 
-header {
-	text-align: center;
-	padding: 20px;
+.gray {
+  background-color: rgb(128 , 128 , 128);
+  transition: 0.5s;
 }
 
-.section-input {
-  margin-bottom: 20px;
+.completed {
+  border-radius: 50%;
+  transition: 0.5s;
 }
 
-.aside-container {
-  display: none;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: transparent;
-  height: 55vh;
-}
-
-aside {
-  position: absolute;
-  right: 0;
-  top: 16%;
-  transform: translateX(100%);
-  overflow-x: hidden;
+footer {
+  color: white;
+  bottom: 0;
+  position: fixed;
 }
 
 footer nav ul {
-	list-style: none;
   display: flex;
   justify-content: space-around;
+	list-style: none;
   width: 100vw;
 }
 
@@ -106,94 +186,9 @@ a {
   text-decoration: none;
 }
 
-footer {
-	color: white;
-  position: fixed;
-  bottom: 0;
-}
-
-.task {
-  padding: 10px;
-  width: 10em;
-  height: 10em;
-  background-color: #041741;
-  border-radius: 0.4em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.5em;
-  cursor: pointer;
-  user-select: none;
-}
-
-#lista-tarefas {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  max-width: 48em;
-  padding-bottom: 15vh;
-}
-
-#texto-tarefa {
-  padding: 1em;
-  border: none;
-  border-bottom: 2px solid black;
-  outline: none;
-  background-color: transparent;
-  margin-left: 20px;
-}
-
-#texto-tarefa:focus {
-  background-color: white;
-  border-radius: 0.4em;
-  transition: 0.5s;
-}
-
-.label-style {
-  top: 17%;
-  right: 0;
-  position: fixed;
-  z-index: 1;
-  /* background-color: turquoise; */
-}
-
-#menu-button {
-  display: none;
-}
-
-#menu-button:checked ~ aside{
-  display: flex;
-  transition: 1.5s;
-  transform: translateX(0%);
-  position: fixed;
-}
-
-.menu-button { 
-  /* background-color: violet; */
-  width: 50px;
-}
-
-#gambiarra {
-  height: 9%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.gray {
-	background-color: rgb(128 , 128 , 128);
-  transition: 0.5s;
-}
-
-.completed {
-	border-radius: 50%;
-  transition: 0.5s;
-}
-
 @media screen and (max-width: 800px) {
   footer nav ul {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
 }

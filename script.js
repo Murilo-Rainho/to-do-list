@@ -1,14 +1,14 @@
-const buttonCriarTarefa = document.querySelector('#criar-tarefa');
-const buttonApagaTudo = document.querySelector('#apaga-tudo');
-const buttonRemoverFinalizados = document.querySelector('#remover-finalizados');
-const buttonSalvarTarefas = document.querySelector('#salvar-tarefas');
-const inputCriarTarefa = document.querySelector('#texto-tarefa');
-const listaTarefas = document.querySelector('#lista-tarefas');
-const removerSelecionado = document.querySelector('#remover-selecionado');
-const moverCima = document.querySelector('#mover-cima');
-const moverBaixo = document.querySelector('#mover-baixo');
-const botaoDeMenu = document.querySelector('#botao-de-menu');
-const asideContainer = document.querySelector('.aside-container');
+const buttonCriarTarefa = document.querySelector('#button__make__task');
+const buttonApagaTudo = document.querySelector('#button__clear__all');
+const buttonRemoverFinalizados = document.querySelector('#button__remove__finished');
+const buttonSalvarTarefas = document.querySelector('#button__save__tasks');
+const inputCriarTarefa = document.querySelector('#input__task');
+const listaTarefas = document.querySelector('#tasks__list');
+const removerSelecionado = document.querySelector('#button__remove__selected');
+const moverCima = document.querySelector('#button__move__up');
+const moverBaixo = document.querySelector('#button__move__down');
+const botaoDeMenu = document.querySelector('#menu__button__label');
+const asideContainer = document.querySelector('.container__aside');
 
 let tarefas = [];
 let tasks = {};
@@ -16,13 +16,13 @@ let gray = document.querySelector('.gray');
 
 // Função para adicionar uma tarefa na lista clicando no botão CriarTarefa
 buttonCriarTarefa.addEventListener('click', () => {
-	if (inputCriarTarefa.value != '') {
+	if (inputCriarTarefa.value !== '') {
 		let div = document.createElement('div');
 		div.innerText = inputCriarTarefa.value;
 		div.className = 'task';
 		listaTarefas.appendChild(div);
 		inputCriarTarefa.value = '';
-		div = document.querySelector('#lista-tarefas').lastElementChild;
+		div = document.querySelector('#tasks__list').lastElementChild;
 		let tasks = {
 			text: div.innerText,
 			class: div.className
@@ -82,7 +82,7 @@ inputCriarTarefa.addEventListener('keypress', (event) => {
 		li.className = 'task';
 		listaTarefas.appendChild(li);
 		inputCriarTarefa.value = '';
-		li = document.querySelector('#lista-tarefas').lastElementChild;
+		li = document.querySelector('#tasks__list').lastElementChild;
 		let tasks = {
 			text: li.innerText,
 			class: li.className
@@ -167,11 +167,3 @@ botaoDeMenu.addEventListener('click', () => {
 		asideContainer.style.display = 'flex';
 	}
 })
-
-// Apaga de um em um
-// buttonApagaTudo.addEventListener('click', () => {
-// 	let lis = document.querySelectorAll('.task');
-// 	for (index in lis) {
-// 		lis[0].remove()
-// 	}
-// })
