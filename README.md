@@ -2,7 +2,11 @@
 
 ### (ongoing project)
 
-![Project's Image]()
+---
+
+![Project's Image](./img/project-image.jpeg)
+
+---
 
 ## About project
 
