@@ -1,6 +1,6 @@
 # To Do List Project
 
-### (ongoing project)
+### (Constantly changing project)
 
 ---
 
