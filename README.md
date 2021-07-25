@@ -1,4 +1,4 @@
-# To Do List Project
+# To Do List
 
 ### (Constantly changing project)
 
