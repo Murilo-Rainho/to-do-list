@@ -24,7 +24,7 @@ Basically you can put your to-do list so you can organize between projects that 
 
 ### HTML
 
-In the *HTML*, I used simple things like **semantic HTML** and a `head` to use futurelly responsivity
+In the *HTML*, I used simple things like **semantic HTML** and a `head` to use futurelly responsivity.
 
 ---
 
@@ -36,7 +36,7 @@ In the CSS, I used basic knowledges like:
 * `transition:`;
 * `@media screen`;
 * Pseudo-class;
-* placeholder styling.
+* Placeholder styling.
 
 Moreover, I hadn't yet learned how to create a menu button, so I used my creativity and little knowledge and google research to create a menu button my way...
 
